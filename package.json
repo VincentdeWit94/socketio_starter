@@ -1,0 +1,25 @@
+{
+  "name": "socketio_starter",
+  "version": "1.0.0",
+  "description": "Simple socket.io starter template",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentdeWit94/socketio_starter.git"
+  },
+  "keywords": [
+    "socketio"
+  ],
+  "author": "Vincent de Wit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincentdeWit94/socketio_starter/issues"
+  },
+  "dependencies": {
+    "socket.io": "^1.3.7"
+  },
+  "homepage": "https://github.com/VincentdeWit94/socketio_starter#readme"
+}
