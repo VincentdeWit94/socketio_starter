@@ -1,24 +1,15 @@
-"use strict";
-/* ************************************************************************
- 
-    Licence : LGPLv3
-    Version: 0.1
-    Authors: Vincent de Wit
-    Date: 2015-12-09
-    Date of last modification: 2015-12-09
-    Description: Digital Entrance Systems Server
- 
-************************************************************************ */
+/*
+var express = require('express');
+var app = express();
+var server = require('http').createServer(app);
+// var io = require('../..')(server);
+// New:
+var io = require('socket.io')(server);
+*/
+var port = process.env.PORT || 3000;
 
-var ws = require("nodejs-websocket");
+var app = require('express')()
+  , server = require('http').createServer(app)
+  , io = require('socket.io').listen(server, { origins: '*:*' });
 
-var server = ws.createServer(function (conn) {
-	console.log("New connection")
-	conn.on("text", function (str) {
-		console.log("Received "+str)
-		conn.sendText(str.toUpperCase()+"!!!")
-	})
-	conn.on("close", function (code, reason) {
-		console.log("Connection closed")
-	})
-}).listen(8001)
+server.listen(port);
